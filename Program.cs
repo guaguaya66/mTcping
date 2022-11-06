@@ -126,7 +126,6 @@ namespace mTcping
 
                     if (hosts.Count == 1)
                     {
-                        Console.WriteLine();
                         Console.WriteLine(
                             string.Format(isZh ? "正在 Tcping {0}:{1} 目标主机" : "Tcping {0}:{1} target host in progress",
                                 point.Address.AddressFamily == AddressFamily.InterNetworkV6
@@ -237,7 +236,6 @@ namespace mTcping
                                     ? "    最短 = {0:0.0}ms，最长 = {1:0.0}ms，平均 = {2:0.0}ms"
                                     : "    Shortest = {0:0.0}ms, Longest = {1:0.0}ms, Average = {2:0.0}ms.",
                                 times.Min(), times.Max(), times.Average());
-                            Console.WriteLine();
                         }
                     }
                 }
@@ -264,7 +262,6 @@ namespace mTcping
                         ? "    最短 = {0:0.0}ms，最长 = {1:0.0}ms，平均 = {2:0.0}ms"
                         : "    Shortest = {0:0.0}ms, Longest = {1:0.0}ms, Average = {2:0.0}ms.",
                     times.Min(), times.Max(), times.Average());
-                Console.WriteLine();
             };
             cmd.Execute(args);
         }
